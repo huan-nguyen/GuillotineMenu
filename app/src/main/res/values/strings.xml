@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Guillotine Menu</string>
+    <string name="music_menu">Music</string>
+    <string name="video_menu">Video</string>
+
+    <string name="music_library_title">Music Library</string>
+    <string name="video_library_title">Video Library</string>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_arrow_up">
+    <target
+        android:name="arrow_vertical"
+        android:animation="@animator/rotate_90_degree"/>
+    <target
+        android:name="path_left"
+        android:animation="@animator/upper_arrow_to_burger"/>
+    <target
+        android:name="path_middle"
+        android:animation="@animator/middle_arrow_to_burger"/>
+    <target
+        android:name="path_right"
+        android:animation="@animator/lower_arrow_to_burger"/>
+</animated-vector>

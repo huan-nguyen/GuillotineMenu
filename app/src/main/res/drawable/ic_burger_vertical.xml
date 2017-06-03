@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="24dp"
+    android:viewportHeight="24.0"
+    android:viewportWidth="24.0"
+    android:width="24dp">
+
+    <group android:name="burger_vertical"
+        android:pivotX="12"
+        android:pivotY="12">
+        <path
+            android:name="path_left"
+            android:fillColor="@android:color/white"
+            android:pathData="M6,3 L8,3 L8,21 L6,21z"/>
+        <path
+            android:name="path_middle"
+            android:fillColor="@android:color/white"
+            android:pathData="M11,3 L12,3 L13,3 L13,21 L11,21z"/>
+
+        <path
+            android:name="path_right"
+            android:fillColor="@android:color/white"
+            android:pathData="M16,3 L18,3 L18,21 L16,21z"/>
+    </group>
+</vector>

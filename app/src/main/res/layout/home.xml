@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.huannguyen.guillotinemenu.ui.HomeView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:elevation="4dp"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <net.huannguyen.guillotinemenu.ui.misc.AnimatedToolbar
+        android:id="@+id/toolbar"
+        style="@style/AppTheme.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:id="@+id/menu_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/music"
+            style="@style/AppTheme.HomeMenuItem"
+            android:drawableStart="@drawable/ic_music_menu"
+            android:text="@string/music_menu"/>
+
+        <TextView
+            android:id="@+id/video"
+            style="@style/AppTheme.HomeMenuItem"
+            android:drawableStart="@drawable/ic_video_menu"
+            android:text="@string/video_menu"/>
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</net.huannguyen.guillotinemenu.ui.HomeView>

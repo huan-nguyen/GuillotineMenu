@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objectAnimator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="@android:integer/config_shortAnimTime"
+    android:propertyName="pathData"
+    android:valueFrom="M11,5 L12,4 L13,5 L13,20 L11,20z"
+    android:valueTo="M11,3 L12,3 L13,3 L13,21 L11,21z"
+    android:valueType="pathType" />

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.huannguyen.guillotinemenu.ui.VideoView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <include layout="@layout/view_feature_toolbar"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:drawableStart="@drawable/ic_video"
+        android:text="@string/video_library_title"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:drawablePadding="16dp"
+        android:gravity="center_vertical"
+        android:layout_margin="30dp"
+        android:layout_weight="1"/>
+</net.huannguyen.guillotinemenu.ui.VideoView>
