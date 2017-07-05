@@ -29,7 +29,8 @@ class MenuOpenChangeHandler : AnimatorChangeHandler() {
         val menuOpenAnimator = ObjectAnimator.ofFloat(to, View.ROTATION, GUILLOTINE_CLOSED_ANGLE, GUILLOTINE_OPENED_ANGLE).apply {
             duration = ACCELERATE_DURATION
             interpolator = AccelerateInterpolator()
-            setListeners(onStart = { to.onMenuOpenAnimStart() }, onEnd = { to.playMenuOpenIconAnim() })
+            onStart { to.onMenuOpenAnimStart() }
+            onEnd { to.playMenuOpenIconAnim() }
         }
 
         val menuBounceAnimator = ObjectAnimator.ofFloat(to, View.ROTATION, GUILLOTINE_OPENED_ANGLE, -BOUNCE_ANGLE).apply {
@@ -56,10 +57,10 @@ class MenuCloseChangeHandler : AnimatorChangeHandler() {
 
         val menuCloseAnimator = ObjectAnimator.ofFloat(from, View.ROTATION, GUILLOTINE_OPENED_ANGLE, GUILLOTINE_CLOSED_ANGLE).apply {
             interpolator = MenuAccelerateInterpolator()
-            setListeners(onEnd = {
+            onEnd {
                 from.alpha = 0f
                 to.playMenuCloseIconAnim()
-            })
+            }
         }
 
         val toolbarAnimator = ObjectAnimator.ofFloat(to.toolbar, View.ROTATION, GUILLOTINE_OPENED_ANGLE, BOUNCE_ANGLE).apply {
@@ -112,9 +113,18 @@ interface FeatureView {
     fun playMenuCloseIconAnim()
 }
 
-fun Animator.setListeners(onStart: () -> Unit = {}, onEnd: () -> Unit) {
+inline private fun Animator.onStart(crossinline onStart: () -> Unit) {
     addListener(object : Animator.AnimatorListener {
         override fun onAnimationStart(animation: Animator?) = onStart()
+        override fun onAnimationEnd(animation: Animator?) {}
+        override fun onAnimationCancel(animation: Animator?) {}
+        override fun onAnimationRepeat(animation: Animator?) {}
+    })
+}
+
+inline private fun Animator.onEnd(crossinline onEnd: () -> Unit) {
+    addListener(object : Animator.AnimatorListener {
+        override fun onAnimationStart(animation: Animator?) {}
         override fun onAnimationEnd(animation: Animator?) = onEnd()
         override fun onAnimationCancel(animation: Animator?) {}
         override fun onAnimationRepeat(animation: Animator?) {}
