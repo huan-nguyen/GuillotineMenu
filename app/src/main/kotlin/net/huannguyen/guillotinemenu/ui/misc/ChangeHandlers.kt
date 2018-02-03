@@ -10,14 +10,14 @@ import android.view.animation.Interpolator
 import com.bluelinelabs.conductor.changehandler.AnimatorChangeHandler
 import net.huannguyen.guillotinemenu.ui.HomeView
 
-private const val GUILLOTINE_CLOSED_ANGLE = -90f
+private const val GUILLOTINE_CLOSED_ANGLE = 90f
 private const val GUILLOTINE_OPENED_ANGLE = 0f
 
 // Feel free to modify these values (of course they need to be meaningful) to try different animation effects.
 private const val ACCELERATE_DURATION = 290L
 private const val BOUNCE_DURATION = 335L
 private const val FIRST_BOUNCE_RATIO = 0.625f
-private const val BOUNCE_ANGLE = 2f
+private const val BOUNCE_ANGLE = 3f
 
 class MenuOpenChangeHandler : AnimatorChangeHandler() {
 
